@@ -1,0 +1,30 @@
+[
+  {
+    "id": "c5bba061-8776-4902-9769-324808fb2db9",
+    "titulo": "SD-Acess - Liberando Access Point",
+    "categoria": "kb_articles",
+    "autor": "Paola Penido",
+    "conteudo_md": "# #TITULO TESTE#\r\n\r\n\r\nCONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO.\r\n\r\n\r\n## SUBTITULO\r\n\r\n\r\nCONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO.\r\n\r\n![screenshot.png](/kb/image/kb_img_b94aaf74.png)\r\n\r\n\r\nCONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO.\r\n\r\n\r\n| Coluna 1 | Coluna 2 | Coluna 3 |\r\n| --- | --- | --- |\r\n| Item 1 | Item 2 | Item 3 |\r\n\r\n\r\n### 1. \r\n\r\n- \r\n- \r\n- Item numerado\r\n\r\n\r\n\r\n```bash\r\n# Comandos de rede ou script aqui\r\n```\r\n\r\n\r\n\r\n> [!NOTE]\r\n> Aviso importante ou recomendação técnica\r\n\r\n\r\n\r\n![screenshot.png](/kb/image/kb_img_eddfbe81.png)",
+    "anexos": [],
+    "data": "2026-10-16 21:10"
+  },
+  {
+    "id": "81f82342-507c-4730-93f9-a52d0dcdc5b4",
+    "titulo": "Procedimento Teste KB Atualizado",
+    "categoria": "kb_articles",
+    "autor": "Engenharia NOC",
+    "conteudo_md": "Novo conteudo editado com sucesso!",
+    "anexos": [],
+    "data": "2026-10-16 21:06",
+    "data_atualizado": "2026-10-16 21:06"
+  },
+  {
+    "id": "f6d82d0e-c96c-4850-8806-99a400c7f561",
+    "titulo": "Procedimento Teste KB",
+    "categoria": "kb_articles",
+    "autor": "Engenharia de Redes",
+    "conteudo_md": "# Titulo Principal\n\nTexto com **negrito**, *italico*, <u>sublinhado</u> e <font color=\"#dc2626\">vermelho</font>.\n\n<mark>Destaque importante</mark>",
+    "anexos": [],
+    "data": "2026-10-16 21:05"
+  }
+]

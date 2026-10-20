@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Home{% endblock %}
+{% block conteudo %}
+<section class="welcome">
+    {% if marca.logo %}
+    <div class="welcome-icon welcome-icon-img"><img src="{{ url_for('static', filename=marca.logo) }}" alt="Logo"></div>
+    {% else %}
+    <div class="welcome-icon">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2h14v2"/></svg>
+    </div>
+    {% endif %}
+    <h1>Welcome to {{ marca.nome }}</h1>
+    <p>Select an option from the sidebar menu to get started.</p>
+</section>
+{% endblock %}

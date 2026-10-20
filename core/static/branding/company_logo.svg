@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+  </defs>
+  <!-- Ícone de Rede / Switch -->
+  <rect x="6" y="8" width="44" height="44" rx="10" fill="url(#logoGrad)" />
+  <circle cx="28" cy="20" r="4" fill="#ffffff" />
+  <circle cx="18" cy="38" r="4" fill="#ffffff" />
+  <circle cx="38" cy="38" r="4" fill="#ffffff" />
+  <path d="M28 24 L18 34 M28 24 L38 34" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Nome da Empresa / Logotipo -->
+  <text x="60" y="30" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="800" fill="#0f172a" letter-spacing="0.5">EMPRESA X</text>
+  <text x="60" y="46" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#64748b" letter-spacing="1.2">NETWORK SOLUTIONS</text>
+</svg>

@@ -1,0 +1,140 @@
+{
+    "default": {
+        "site_id": "default",
+        "site_name": "Padrão (Geral)",
+        "vlan_direct_pools": {
+            "108": "POOL_VLAN_108",
+            "162": "POOL_VLAN_162",
+            "1940": "POOL_VLAN_1940"
+        },
+        "vlan_replace_pools": {
+            "749": {
+                "replace_vlan": "1030",
+                "pool_name": "POOL_VLAN_1030"
+            },
+            "750": {
+                "replace_vlan": "1031",
+                "pool_name": "POOL_VLAN_1031"
+            },
+            "751": {
+                "replace_vlan": "1032",
+                "pool_name": "POOL_VLAN_1032"
+            }
+        },
+        "vendor_pools": [
+            {
+                "keywords": [
+                    "seiko",
+                    "epson",
+                    "argox",
+                    "zebra"
+                ],
+                "pool_name": "POOL_IMPRESSORAS",
+                "service_type": "Impressora"
+            },
+            {
+                "keywords": [
+                    "dell",
+                    "asrock",
+                    "lenovo",
+                    "hp",
+                    "intel",
+                    "apple"
+                ],
+                "pool_name": "POOL_WORKSTATIONS",
+                "service_type": "Desktop/Notebook"
+            }
+        ],
+        "default_pool": "POOL_DADOS_GERAL",
+        "camera_keywords": [
+            "camera",
+            "cam",
+            "hikvision",
+            "axis",
+            "intelbras",
+            "vivotek",
+            "dahua",
+            "cctv"
+        ],
+        "ap_keywords": [
+            "ap",
+            "access point",
+            "aruba",
+            "ruckus",
+            "cisco ap",
+            "meraki",
+            "aironet"
+        ],
+        "ap_pool": "ap_INFRA_VN"
+    },
+    "site_teste_sp": {
+        "site_id": "site_teste_sp",
+        "site_name": "ICA",
+        "ap_pool": "ap_INFRA_VN",
+        "default_vlan_dados": "708",
+        "vlan_direct_pools": {
+            "108": "RAP",
+            "162": "Gerencia Nucleo 162",
+            "163": "Gerencia Nucleo 163",
+            "164": "Gerencia Nucleo 164",
+            "1940": "vl1940_ric_c_acesso"
+        },
+        "vlan_replace_pools": {
+            "749": {
+                "replace_vlan": "1030",
+                "pool_name": "cameras1030"
+            },
+            "750": {
+                "replace_vlan": "1031",
+                "pool_name": "cameras1031"
+            },
+            "751": {
+                "replace_vlan": "1032",
+                "pool_name": "cameras1032"
+            }
+        },
+        "vendor_pools": [
+            {
+                "keywords": [
+                    "dell",
+                    "asrock"
+                ],
+                "pool_name": "notebooks_desktops",
+                "service_type": "Dispositivo"
+            },
+            {
+                "keywords": [
+                    "unify"
+                ],
+                "pool_name": "telefoneIP_gateway_ATA",
+                "service_type": "Dispositivo"
+            },
+            {
+                "keywords": [
+                    "seiko epson"
+                ],
+                "pool_name": "impressoras_plotters_scanners",
+                "service_type": "Dispositivo"
+            }
+        ],
+        "camera_keywords": [
+            "camera",
+            "cam",
+            "hikvision",
+            "axis",
+            "intelbras",
+            "vivotek",
+            "dahua",
+            "cctv"
+        ],
+        "ap_keywords": [
+            "ap",
+            "access point",
+            "aruba",
+            "ruckus",
+            "cisco ap",
+            "meraki",
+            "aironet"
+        ]
+    }
+}

@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+{% block titulo %}Finalização "PARA" - Migração de Switches{% endblock %}
+{% block conteudo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='de_para.css') }}">
+
+<section class="page-head">
+    <div>
+        <a href="{{ url_for('menu', menu_id='rollout') }}" class="text-muted" style="font-size: 13px; display: inline-block; margin-bottom: 6px;">
+            &larr; Back to Phase 2 - Pre/Post Rollout
+        </a>
+        <h1>Finalização "PARA"</h1>
+        <p>Automação inteligente de migração de switches de acesso para Cisco Catalyst 9300 (preenchimento das colunas R a U, alocação de portas, APs no topo, balanceamento de câmeras e IP pools por site).</p>
+    </div>
+</section>
+
+<div class="de-para-wrapper">
+    <!-- Navegação de Abas -->
+    <div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; margin-bottom: 24px; display: flex; gap: 8px; box-shadow: var(--shadow);">
+        <button type="button" class="nav-btn active" data-tab="tab-migration">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            Processar Migração
+        </button>
+        <button type="button" class="nav-btn" data-tab="tab-config">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-.273l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            Cadastro Padrão por Site
+        </button>
+        <button type="button" class="nav-btn" data-tab="tab-rules">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Regras de Negócio
+        </button>
+    </div>
+
+    <!-- ABA 1: PROCESSAR MIGRAÇÃO -->
+    <section id="tab-migration" class="tab-content active">
+        <div class="grid-layout">
+            <!-- Painel de Formulário -->
+            <div class="card form-card">
+                <div class="card-header">
+                    <h2>Parâmetros da Nova Pilha de Switches</h2>
+                    <p>Informe o hostname, monte a pilha de switches e carregue a planilha DE PARA (.xlsx)</p>
+                </div>
+
+                <form id="migration-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="new_hostname">Hostname do Switch Novo *</label>
+                        <input type="text" id="new_hostname" name="new_hostname" placeholder="Ex: SW-NOVO-SP-01" required value="SW-NOVO-01">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="site_id">Site de Origem (Regras IP Pool) *</label>
+                            <select id="site_id" name="site_id" required>
+                                <option value="default">Padrão (Geral)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="new_aps_count">Novos APs a Adicionar</label>
+                            <input type="number" id="new_aps_count" name="new_aps_count" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <!-- Campo de VLAN Padrão de Dados -->
+                    <div class="form-group">
+                        <label for="default_vlan_dados">VLAN Padrão de Dados do Local</label>
+                        <input type="text" id="default_vlan_dados" name="default_vlan_dados" placeholder="Ex: 110, 111" value="">
+                        <p class="field-hint">Permite informar uma ou mais VLANs separadas por vírgula (ex: 110, 111). Portas com uma dessas VLANs de dados sem MAC recebem o pool combinado de Telefone IP + Notebooks/Desktops.</p>
+                    </div>
+
+                    <!-- Construtor da Pilha de Switches -->
+                    <div class="form-group">
+                        <div class="stack-header">
+                            <label>Composição da Pilha de Switches Novos *</label>
+                            <button type="button" id="btn-add-switch" class="btn-secondary btn-sm">+ Adicionar Switch</button>
+                        </div>
+                        <p class="field-hint">Modelos suportados: C9300-48U, C9300-24UX, C9300-24P</p>
+
+                        <div id="stack-builder-list" class="stack-builder-list">
+                            <!-- Membros adicionados via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Upload do Arquivo -->
+                    <div class="form-group">
+                        <label>Planilha DE PARA (.xlsx) *</label>
+                        <div class="file-drop-zone" id="drop-zone">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="12" y2="12"></line><line x1="15" y1="15" x2="12" y2="12"></line></svg>
+                            <span class="drop-title">Arraste a planilha aqui ou clique para selecionar</span>
+                            <span class="drop-hint">Formato aceito: .xlsx (com colunas A a Q)</span>
+                            <input type="file" id="excel_file" name="excel_file" accept=".xlsx" required hidden>
+                            <div id="selected-file-info" class="selected-file-info"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btn-submit" class="btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Processar e Preencher Colunas R a U
+                        </button>
+                        <button type="button" id="btn-generate-sample" class="btn-link">Baixar Planilha Exemplo para Testes</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Painel de Resultados / Preview -->
+            <div class="card result-card" id="result-card">
+                <div class="card-header flex-between">
+                    <div>
+                        <h2>Resultado do Processamento</h2>
+                        <p id="result-status-text">Aguardando envio de planilha...</p>
+                    </div>
+                    <div id="download-container" style="display: none;">
+                        <a id="btn-download" href="#" class="btn-success">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Baixar Planilha Preenchida (.xlsx)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Métricas -->
+                <div id="metrics-grid" class="metrics-grid" style="display: none;">
+                    <div class="metric-box">
+                        <span class="metric-value" id="m-total-migradas">0</span>
+                        <span class="metric-label">Linhas Migradas</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-value" id="m-total-aps">0</span>
+                        <span class="metric-label">APs Alocados (UX)</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-value" id="m-total-cams">0</span>
+                        <span class="metric-label">Câmeras Divididas</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-value" id="m-total-geral">0</span>
+                        <span class="metric-label">Pontos Gerais</span>
+                    </div>
+                </div>
+
+                <!-- Tabela de Preview de Colunas R a U -->
+                <div class="table-container">
+                    <table class="data-table" id="preview-table">
+                        <thead>
+                            <tr>
+                                <th>Linha</th>
+                                <th>Descrição / Dispositivo</th>
+                                <th>Tipo</th>
+                                <th>Switch Novo (R)</th>
+                                <th>Porta (S)</th>
+                                <th>IP Pool (T)</th>
+                                <th>Observação (U)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="preview-tbody">
+                            <tr>
+                                <td colspan="7" class="empty-row">Nenhum processamento realizado ainda. Envie a planilha no formulário ao lado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABA 2: CADASTRO PADRÃO POR SITE -->
+    <section id="tab-config" class="tab-content">
+        <div class="site-management-grid">
+            <!-- Painel Lateral: Lista de Sites Cadastrados -->
+            <div class="card site-list-card">
+                <div class="card-header flex-between">
+                    <div>
+                        <h2>Sites Cadastrados</h2>
+                        <p>Clique em um site para editar</p>
+                    </div>
+                    <button type="button" id="btn-new-site" class="btn-primary btn-sm">+ Criar Novo Site</button>
+                </div>
+
+                <div id="sites-nav-list" class="sites-nav-list">
+                    <!-- Lista interativa de sites renderizada via JS -->
+                </div>
+            </div>
+
+            <!-- Painel Principal: Formulário de Edição do Site Selecionado -->
+            <div class="card site-edit-card">
+                <div class="card-header flex-between">
+                    <div>
+                        <h2 id="editing-site-title">Editando: Padrão (Geral)</h2>
+                        <p id="editing-site-subtitle">ID do perfil: default</p>
+                    </div>
+                    <button type="button" id="btn-delete-site" class="btn-danger btn-sm">Excluir Este Site</button>
+                </div>
+
+                <form id="config-form">
+                    <input type="hidden" id="cfg_site_id" value="default">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cfg_site_name">Nome de Exibição do Site *</label>
+                            <input type="text" id="cfg_site_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cfg_ap_pool">Pool Padrão para APs (Access Points)</label>
+                            <input type="text" id="cfg_ap_pool" value="ap_INFRA_VN" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cfg_default_vlan_dados">VLAN Padrão de Dados do Site</label>
+                        <input type="text" id="cfg_default_vlan_dados" placeholder="Ex: 110, 111" value="">
+                    </div>
+
+                    <!-- Standard Pools Notice -->
+                    <div class="standard-pools-banner">
+                        <strong>Pools Padrão da Organização:</strong>
+                        <span class="pool-chip">notebooks_desktops</span>
+                        <span class="pool-chip">impressoras_plotters_scanners</span>
+                        <span class="pool-chip">telefoneIP_gateway_ATA</span>
+                        <span class="pool-chip">1250_ATA</span>
+                        <span class="pool-chip">ap_INFRA_VN</span>
+                    </div>
+
+                    <!-- Vendor Pools -->
+                    <div class="config-section">
+                        <h3>Mapeamento por Marca / Vendor</h3>
+                        <p class="field-hint">Associe palavras-chave de marcas/vendors aos pools desejados. Informe "camera" no Tipo de Dispositivo se desejar classificar como câmera.</p>
+                        <div id="vendor-pools-list" class="dynamic-config-list"></div>
+                        <button type="button" id="btn-add-vendor-pool" class="btn-link">+ Adicionar Regra por Marca/Vendor</button>
+                    </div>
+
+                    <!-- VLAN Direct Pools -->
+                    <div class="config-section">
+                        <h3>VLANs Diretas (Pool = VLAN)</h3>
+                        <p class="field-hint">Defina quais VLANs possuem pools diretos específicos. Preencha "camera" em Tipo de Dispositivo se a VLAN for de Câmeras.</p>
+                        <div id="vlan-direct-list" class="dynamic-config-list"></div>
+                        <button type="button" id="btn-add-vlan-direct" class="btn-link">+ Adicionar Regra de VLAN Direta</button>
+                    </div>
+
+                    <!-- VLAN Replace Pools -->
+                    <div class="config-section">
+                        <h3>Substituição de VLANs (VLAN Replace)</h3>
+                        <p class="field-hint">Ex: VLAN 748 deve ser alterada para 1030 (Pool ica_vl1030_sisp_cameras_pool). Informe "camera" no Tipo de Dispositivo para atuar no balanceamento de câmeras.</p>
+                        <div id="vlan-replace-list" class="dynamic-config-list"></div>
+                        <button type="button" id="btn-add-vlan-replace" class="btn-link">+ Adicionar Regra de VLAN Replace</button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                            Salvar Configuração do Site
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABA 3: REGRAS E GUIA -->
+    <section id="tab-rules" class="tab-content">
+        <div class="card">
+            <div class="card-header">
+                <h2>Regras de Distribuição e Arquitetura</h2>
+                <p>Entenda como a inteligência do sistema aloca portas e pools nas colunas R a U</p>
+            </div>
+
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                    </div>
+                    <h3>1. Alocação de Access Points (APs) no TOPO</h3>
+                    <p>APs são definidos exclusivamente pela quantidade informada e são alocados com prioridade nos switches <strong>C9300-24UX</strong> (mGig/Redundante) e inseridos no topo da planilha com o pool <strong>ap_INFRA_VN</strong>.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    </div>
+                    <h3>2. Balanceamento de Câmeras</h3>
+                    <p>Câmeras são identificadas pelas regras cadastradas (quando contêm o Tipo de Dispositivo "camera" ou o pool contém "camera/cameras"). Câmeras são divididas igualitariamente entre todos os switches da pilha.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3>3. Alertas em Vermelho Sem Fallback Silencioso</h3>
+                    <p>Portas com VLANs desconhecidas sem MAC ou marcas de vendors não cadastrados geram mensagens de alerta e são **pintadas de vermelho no Excel**, garantindo 100% de precisão na validação manual.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h3>4. Estrutura das Colunas Geradas</h3>
+                    <ul>
+                        <li><strong>Coluna R:</strong> Switch novo (hostname ex: SW-NOVO-01)</li>
+                        <li><strong>Coluna S:</strong> Porta nova (ex: 1/0/1, 2/0/1)</li>
+                        <li><strong>Coluna T:</strong> IP Pool determinado pelas regras (célula vermelha se vendor/VLAN não cadastrados)</li>
+                        <li><strong>Coluna U:</strong> Observação (fica em branco para linhas normais)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="{{ url_for('static', filename='de_para.js') }}"></script>
+{% endblock %}

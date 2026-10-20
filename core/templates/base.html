@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ marca.nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=css_v) }}">
+</head>
+<body>
+    <aside class="sidebar">
+        <a class="brand" href="{{ url_for('index') }}">
+            {% if marca.logo %}
+            <span class="brand-icon brand-icon-img"><img src="{{ url_for('static', filename=marca.logo) }}" alt="Logo"></span>
+            {% else %}
+            <span class="brand-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2h14v2"/></svg>
+            </span>
+            {% endif %}
+            <span class="brand-text">
+                <strong>{{ marca.nome }}</strong>
+                <small>Information Gathering</small>
+            </span>
+        </a>
+
+        <nav class="nav">
+            {% for gid, g in grupos.items() %}
+            <details class="grupo" open>
+                <summary>
+                    {% if g.icone == "tools" %}
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    {% elif g.icone == "file-text" %}
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    {% elif g.icone == "book-open" %}
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    {% else %}
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    {% endif %}
+                    <span>{{ g.titulo }}</span>
+                    <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <ul class="menu">
+                    {% set counter = namespace(val=1) %}
+                    {% for mid, m in g.menus.items() %}
+                    <li>
+                        <a href="{{ url_for('menu', menu_id=mid) }}" class="{{ 'ativo' if menu_id == mid }}">
+                            {% if m.sem_numero %}
+                            <span class="badge badge-icon">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/></svg>
+                            </span>
+                            {% else %}
+                            <span class="badge">{{ counter.val }}</span>
+                            {% set counter.val = counter.val + 1 %}
+                            {% endif %}
+                            <span>{{ m.titulo }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </details>
+            {% endfor %}
+        </nav>
+
+        <div class="sidebar-footer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <span>Read-only mode</span>
+        </div>
+    </aside>
+
+    <div class="conteudo">
+        <header class="topbar">
+            <div class="topbar-title">{% block titulo %}Home{% endblock %}</div>
+            <div class="pill">
+                <span class="dot"></span>
+                Collection only &mdash; no changes made to network devices
+            </div>
+        </header>
+        <main>
+            {% block conteudo %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>

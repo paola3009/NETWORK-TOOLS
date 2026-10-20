@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block titulo %}Subnet Calculator{% endblock %}
+{% block conteudo %}
+<section class="page-head">
+    <div>
+        <h1>Subnet Calculator</h1>
+        <p>Calculate network address, broadcast, usable host ranges, wildcard mask, and parent network hierarchy (Supernetting).</p>
+    </div>
+</section>
+
+<div class="calc-container">
+    <div class="calc-card">
+        <form method="POST" action="{{ url_for('menu', menu_id='subnet_calc') }}">
+            <div class="form-group">
+                <label for="ip_input">IP Address and CIDR / Netmask:</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="ip_input" name="ip_input" value="{{ ip_input if ip_input else '' }}" required placeholder="e.g. 10.255.60.0/29 or 192.168.1.1 255.255.255.0" style="flex: 1;">
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+                <small class="text-muted" style="margin-top: 4px;">Quick examples: <code>10.255.60.0/29</code>, <code>172.16.20.1/22</code>, <code>192.168.1.1/24</code>, <code>2001:db8::1/64</code></small>
+            </div>
+        </form>
+
+        {% if erro_msg %}
+        <div class="calc-error">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>{{ erro_msg }}</span>
+        </div>
+        {% endif %}
+    </div>
+
+    {% if resultado %}
+    <div class="calc-results-card">
+        <h2>Subnet Details for <code>{{ resultado.ip_digitado }}{{ resultado.cidr }}</code></h2>
+        <div class="calc-grid">
+            <div class="calc-stat">
+                <span class="stat-label">Network Address</span>
+                <span class="stat-val text-primary">{{ resultado.network }}</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">Subnet Mask</span>
+                <span class="stat-val">{{ resultado.netmask }} ({{ resultado.cidr }})</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">Wildcard (Inverted)</span>
+                <span class="stat-val">{{ resultado.wildcard }}</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">Broadcast Address</span>
+                <span class="stat-val">{{ resultado.broadcast }}</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">Usable Host Range</span>
+                <span class="stat-val">{{ resultado.primeiro_ip }} &mdash; {{ resultado.ultimo_ip }}</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">Usable Hosts Count</span>
+                <span class="stat-val font-bold">{{ resultado.hosts_utilizaveis }}</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">Total IP Addresses</span>
+                <span class="stat-val">{{ resultado.total_ips }}</span>
+            </div>
+            <div class="calc-stat">
+                <span class="stat-label">IP Type / Scope</span>
+                <span class="stat-val">{{ resultado.tipo_ip }}</span>
+            </div>
+            {% if resultado.versao == 4 %}
+            <div class="calc-stat" style="grid-column: 1 / -1;">
+                <span class="stat-label">Binary Subnet Mask</span>
+                <span class="stat-val" style="font-family: monospace; font-size: 13px; color: #475569;">{{ resultado.mascara_bin }}</span>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if resultado.supernets %}
+    <div class="calc-results-card">
+        <h2>Parent Networks (Which network does <code>{{ resultado.cidr }}</code> belong to?)</h2>
+        <p class="text-muted" style="margin-bottom: 16px; font-size: 13.5px;">
+            Find out which major blocks (such as /24, /23, /21, /19, /16, /8) contain this subnet:
+        </p>
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Prefix</th>
+                        <th>Parent Network Address</th>
+                        <th>Subnet Mask</th>
+                        <th>Usable IP Range</th>
+                        <th>Total Capacity</th>
+                        <th style="text-align: right;">Subnets of size {{ resultado.cidr }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for s in resultado.supernets %}
+                    <tr {% if s.prefixo in ['/24', '/19', '/16', '/8'] %}style="background: #f0fdf4;"{% endif %}>
+                        <td>
+                            <strong {% if s.prefixo in ['/24', '/19', '/16', '/8'] %}style="color: #15803d;"{% endif %}>{{ s.prefixo }}</strong>
+                        </td>
+                        <td>
+                            <code style="font-weight: 600; font-size: 13.5px;">{{ s.cidr_completo }}</code>
+                        </td>
+                        <td>{{ s.netmask }}</td>
+                        <td>{{ s.primeiro_ip }} &mdash; {{ s.ultimo_ip }}</td>
+                        <td>{{ s.total_ips }} IPs</td>
+                        <td style="text-align: right; font-weight: 600; color: #0284c7;">
+                            {{ s.total_subredes_deste_tamanho }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,3359 @@
+{
+  "SW10101IFO": {
+    "loopback0_ip": "10.125.209.125",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.138",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/9"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.130",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/9"
+      },
+      {
+        "neighbor": "PA01011IFO",
+        "neighbor_ip": "10.125.213.98",
+        "local_intf": "Te1/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01010IFO",
+        "neighbor_ip": "10.125.213.99",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01001IFO",
+        "neighbor_ip": "10.125.215.40",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01002IFO",
+        "neighbor_ip": "10.125.213.95",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01003IFO",
+        "neighbor_ip": "10.125.214.206",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01004IFO",
+        "neighbor_ip": "10.125.213.96",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01005IFO",
+        "neighbor_ip": "10.125.215.39",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01006IFO",
+        "neighbor_ip": "10.125.215.37",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01007IFO",
+        "neighbor_ip": "10.125.215.36",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01008IFO",
+        "neighbor_ip": "10.125.213.97",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01009IFO",
+        "neighbor_ip": "10.125.215.44",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10111IFO": {
+    "loopback0_ip": "10.125.209.64",
+    "cdp": [
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.66",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/10"
+      },
+      {
+        "neighbor": "PA01110IFO",
+        "neighbor_ip": "10.125.213.69",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01101IFO",
+        "neighbor_ip": "10.125.213.64",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01111IFO",
+        "neighbor_ip": "10.125.213.67",
+        "local_intf": "Te1/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01103IFO",
+        "neighbor_ip": "10.125.213.63",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01102IFO",
+        "neighbor_ip": "10.125.213.66",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01105IFO",
+        "neighbor_ip": "10.125.215.14",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01104IFO",
+        "neighbor_ip": "10.125.215.13",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01107IFO",
+        "neighbor_ip": "10.125.215.12",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01106IFO",
+        "neighbor_ip": "10.125.215.15",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01109IFO",
+        "neighbor_ip": "10.125.213.68",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA01108IFO",
+        "neighbor_ip": "10.125.213.65",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10211IFO": {
+    "loopback0_ip": "10.125.209.31",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.41",
+        "local_intf": "Twe4/1/1",
+        "neighbor_intf": "Twe6/0/11"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.38",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/11"
+      },
+      {
+        "neighbor": "PA02102IFO",
+        "neighbor_ip": "10.125.214.252",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA02103IFO",
+        "neighbor_ip": "10.125.214.250",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA02101IFO",
+        "neighbor_ip": "10.125.213.40",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA02106IFO",
+        "neighbor_ip": "10.125.214.253",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA02104IFO",
+        "neighbor_ip": "10.125.214.251",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA02105IFO",
+        "neighbor_ip": "10.125.213.41",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10311IFO": {
+    "loopback0_ip": "10.125.209.27",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.37",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/12"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.34",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/12"
+      },
+      {
+        "neighbor": "PA03103IFO",
+        "neighbor_ip": "10.125.214.247",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03102IFO",
+        "neighbor_ip": "10.125.213.39",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03101IFO",
+        "neighbor_ip": "10.125.213.34",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03110IFO",
+        "neighbor_ip": "10.125.213.33",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03107IFO",
+        "neighbor_ip": "10.125.214.249",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03106IFO",
+        "neighbor_ip": "10.125.213.37",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03105IFO",
+        "neighbor_ip": "10.125.213.35",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03104IFO",
+        "neighbor_ip": "10.125.214.248",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03109IFO",
+        "neighbor_ip": "10.125.213.38",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA03108IFO",
+        "neighbor_ip": "10.125.213.36",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10411IFO": {
+    "loopback0_ip": "10.125.209.51",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.59",
+        "local_intf": "Twe4/1/1",
+        "neighbor_intf": "Twe6/0/13"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.54",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/13"
+      },
+      {
+        "neighbor": "PA04104IFO",
+        "neighbor_ip": "10.125.215.86",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04105IFO",
+        "neighbor_ip": "10.125.213.58",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04106IFO",
+        "neighbor_ip": "10.125.215.1",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04107IFO",
+        "neighbor_ip": "10.125.215.2",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04111IFO",
+        "neighbor_ip": "10.125.213.48",
+        "local_intf": "Te1/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04110IFO",
+        "neighbor_ip": "10.125.213.46",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04101IFO",
+        "neighbor_ip": "10.125.213.45",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04113IFO",
+        "neighbor_ip": "10.125.213.47",
+        "local_intf": "Te1/0/13",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04102IFO",
+        "neighbor_ip": "10.125.213.44",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04103IFO",
+        "neighbor_ip": "10.125.213.51",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04112IFO",
+        "neighbor_ip": "10.125.213.43",
+        "local_intf": "Te1/0/12",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04108IFO",
+        "neighbor_ip": "10.125.215.0",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA04109IFO",
+        "neighbor_ip": "10.125.214.254",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10511IFO": {
+    "loopback0_ip": null,
+    "cdp": []
+  },
+  "SW10611IFO": {
+    "loopback0_ip": "10.125.209.63",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.77",
+        "local_intf": "Twe4/1/1",
+        "neighbor_intf": "Twe6/0/15"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.60",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/15"
+      },
+      {
+        "neighbor": "PA06106IFO",
+        "neighbor_ip": "10.125.213.52",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06107IFO",
+        "neighbor_ip": "10.125.213.54",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06104IFO",
+        "neighbor_ip": "10.125.215.3",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06105IFO",
+        "neighbor_ip": "10.125.213.49",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06113IFO",
+        "neighbor_ip": "10.125.213.55",
+        "local_intf": "Te1/0/13",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06102IFO",
+        "neighbor_ip": "10.125.213.56",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06112IFO",
+        "neighbor_ip": "10.125.215.4",
+        "local_intf": "Te1/0/12",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06103IFO",
+        "neighbor_ip": "10.125.213.57",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06111IFO",
+        "neighbor_ip": "10.125.213.53",
+        "local_intf": "Te1/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06110IFO",
+        "neighbor_ip": "10.125.215.5",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06101IFO",
+        "neighbor_ip": "10.125.215.6",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06108IFO",
+        "neighbor_ip": "10.125.215.7",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA06109IFO",
+        "neighbor_ip": "10.125.213.50",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10811IFO": {
+    "loopback0_ip": "10.125.209.70",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.73",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/16"
+      },
+      {
+        "neighbor": "PA08108IFO",
+        "neighbor_ip": "10.125.213.62",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08101IFO",
+        "neighbor_ip": "10.125.215.9",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08102IFO",
+        "neighbor_ip": "10.125.215.10",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08103IFO",
+        "neighbor_ip": "10.125.215.11",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08104IFO",
+        "neighbor_ip": "10.125.213.59",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08105IFO",
+        "neighbor_ip": "10.125.215.8",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08106IFO",
+        "neighbor_ip": "10.125.213.60",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA08107IFO",
+        "neighbor_ip": "10.125.213.61",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10901IFO": {
+    "loopback0_ip": "10.125.209.128",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.154",
+        "local_intf": "Twe2/1/1",
+        "neighbor_intf": "Twe6/0/1"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.142",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/1"
+      }
+    ]
+  },
+  "SW10911IFO": {
+    "loopback0_ip": "10.125.209.187",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.196",
+        "local_intf": "Twe4/1/1",
+        "neighbor_intf": "Twe6/0/2"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.207",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/2"
+      }
+    ]
+  },
+  "SW10912IFO": {
+    "loopback0_ip": "10.125.209.191",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.205",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/3"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.198",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/3"
+      },
+      {
+        "neighbor": "PA09101IFO",
+        "neighbor_ip": "10.125.213.117",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09103IFO",
+        "neighbor_ip": "10.125.215.74",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09113IFO",
+        "neighbor_ip": "10.125.215.72",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09102IFO",
+        "neighbor_ip": "10.125.215.73",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09115IFO",
+        "neighbor_ip": "10.125.215.60",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10913IFO": {
+    "loopback0_ip": "10.125.209.173",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.188",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/5"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.180",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/5"
+      },
+      {
+        "neighbor": "PA09114IFO",
+        "neighbor_ip": "10.125.215.70",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09105IFO",
+        "neighbor_ip": "10.125.213.116",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09104IFO",
+        "neighbor_ip": "10.125.215.67",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09107IFO",
+        "neighbor_ip": "10.125.215.68",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09106IFO",
+        "neighbor_ip": "10.125.215.75",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10914IFO": {
+    "loopback0_ip": "10.125.209.186",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.194",
+        "local_intf": "Twe2/1/1",
+        "neighbor_intf": "Twe6/0/4"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.182",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/4"
+      },
+      {
+        "neighbor": "PA09109IFO",
+        "neighbor_ip": "10.125.215.65",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09108IFO",
+        "neighbor_ip": "10.125.213.114",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09110IFO",
+        "neighbor_ip": "10.125.213.115",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09111IFO",
+        "neighbor_ip": "10.125.215.71",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09112IFO",
+        "neighbor_ip": "10.125.215.66",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10921IFO": {
+    "loopback0_ip": "10.125.209.159",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.165",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/7"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.162",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/7"
+      },
+      {
+        "neighbor": "PA09202IFO",
+        "neighbor_ip": "10.125.215.59",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09203IFO",
+        "neighbor_ip": "10.125.213.111",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09201IFO",
+        "neighbor_ip": "10.125.214.161",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09206IFO",
+        "neighbor_ip": "10.125.215.57",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09207IFO",
+        "neighbor_ip": "10.125.214.163",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09204IFO",
+        "neighbor_ip": "10.125.213.110",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09205IFO",
+        "neighbor_ip": "10.125.213.112",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10922IFO": {
+    "loopback0_ip": "10.125.209.172",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.175",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/6"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.170",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/6"
+      },
+      {
+        "neighbor": "PA09219IFO",
+        "neighbor_ip": "10.125.214.142",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09217IFO",
+        "neighbor_ip": "10.125.214.153",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09216IFO",
+        "neighbor_ip": "10.125.213.105",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09215IFO",
+        "neighbor_ip": "10.125.214.155",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09214IFO",
+        "neighbor_ip": "10.125.213.107",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW10923IFO": {
+    "loopback0_ip": "10.125.209.160",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.179",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/8"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.166",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/8"
+      },
+      {
+        "neighbor": "PA09208IFO",
+        "neighbor_ip": "10.125.214.158",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09218IFO",
+        "neighbor_ip": "10.125.214.159",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09209IFO",
+        "neighbor_ip": "10.125.213.106",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09220IFO",
+        "neighbor_ip": "10.125.214.160",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09213IFO",
+        "neighbor_ip": "10.125.214.157",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09212IFO",
+        "neighbor_ip": "10.125.214.156",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09211IFO",
+        "neighbor_ip": "10.125.213.109",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA09210IFO",
+        "neighbor_ip": "10.125.213.108",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11011IFO": {
+    "loopback0_ip": "10.125.209.71",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.90",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe6/0/20"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.80",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/20"
+      },
+      {
+        "neighbor": "PA10101IFO",
+        "neighbor_ip": "10.125.215.17",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA10001IFO",
+        "neighbor_ip": "10.125.215.16",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA10002IFO",
+        "neighbor_ip": "10.125.213.70",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA10103IFO",
+        "neighbor_ip": "10.125.215.20",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA10003IFO",
+        "neighbor_ip": "10.125.215.18",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA10102IFO",
+        "neighbor_ip": "10.125.215.19",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11101IFO": {
+    "loopback0_ip": null,
+    "cdp": []
+  },
+  "SW11201IFO": {
+    "loopback0_ip": "10.125.209.148",
+    "cdp": [
+      {
+        "neighbor": "SW11211IFO",
+        "neighbor_ip": "10.125.209.151",
+        "local_intf": "Te1/0/24",
+        "neighbor_intf": "Te1/0/1"
+      },
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.157",
+        "local_intf": "Twe4/1/1",
+        "neighbor_intf": "Twe6/0/21"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.144",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/21"
+      },
+      {
+        "neighbor": "PA12002IFO",
+        "neighbor_ip": "10.125.215.61",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12103IFO",
+        "neighbor_ip": "10.125.215.62",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12003IFO",
+        "neighbor_ip": "10.125.213.102",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12102IFO",
+        "neighbor_ip": "10.125.215.63",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12001IFO",
+        "neighbor_ip": "10.125.213.101",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12007IFO",
+        "neighbor_ip": "10.125.213.103",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12004IFO",
+        "neighbor_ip": "10.125.213.104",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12104IFO",
+        "neighbor_ip": "10.125.213.119",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12008IFO",
+        "neighbor_ip": "10.125.213.125",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12009IFO",
+        "neighbor_ip": "10.125.215.80",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11211IFO": {
+    "loopback0_ip": "10.125.209.149",
+    "cdp": [
+      {
+        "neighbor": "SW11201IFO",
+        "neighbor_ip": "10.125.209.150",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Te1/0/24"
+      },
+      {
+        "neighbor": "PA12101IFO",
+        "neighbor_ip": "10.125.213.87",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12010IFO",
+        "neighbor_ip": "10.125.215.81",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12006IFO",
+        "neighbor_ip": "10.125.213.100",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA12005IFO",
+        "neighbor_ip": "10.125.215.58",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11212IFO": {
+    "loopback0_ip": null,
+    "cdp": []
+  },
+  "SW11301IFO": {
+    "loopback0_ip": "10.125.209.50",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.53",
+        "local_intf": "Twe1/1/2",
+        "neighbor_intf": "Twe2/0/15"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.48",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/15"
+      },
+      {
+        "neighbor": "PA13006IFO",
+        "neighbor_ip": "10.125.214.237",
+        "local_intf": "Gi1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13005IFO",
+        "neighbor_ip": "10.125.214.235",
+        "local_intf": "Gi1/0/1",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11311IFO": {
+    "loopback0_ip": "10.125.209.95",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.103",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe5/0/11"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.100",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/11"
+      },
+      {
+        "neighbor": "PA13002IFO",
+        "neighbor_ip": "10.125.213.78",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13001IFO",
+        "neighbor_ip": "10.125.215.25",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13106IFO",
+        "neighbor_ip": "10.125.213.80",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13104IFO",
+        "neighbor_ip": "10.125.213.79",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13105IFO",
+        "neighbor_ip": "10.125.215.26",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11312IFO": {
+    "loopback0_ip": "10.125.209.85",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.99",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe5/0/12"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.92",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/12"
+      },
+      {
+        "neighbor": "PA13102IFO",
+        "neighbor_ip": "10.125.213.77",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13003IFO",
+        "neighbor_ip": "10.125.213.75",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13103IFO",
+        "neighbor_ip": "10.125.215.23",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13101IFO",
+        "neighbor_ip": "10.125.215.24",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA13004IFO",
+        "neighbor_ip": "10.125.213.76",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11401IFO": {
+    "loopback0_ip": "10.125.209.26",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.29",
+        "local_intf": "Twe2/1/1",
+        "neighbor_intf": "Twe5/0/13"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.22",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/13"
+      },
+      {
+        "neighbor": "PA14001IFO",
+        "neighbor_ip": "10.125.214.239",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA14002IFO",
+        "neighbor_ip": "10.125.213.24",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA14003IFO",
+        "neighbor_ip": "10.125.214.240",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11411IFO": {
+    "loopback0_ip": "10.125.209.11",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.21",
+        "local_intf": "Twe2/1/1",
+        "neighbor_intf": "Twe5/0/15"
+      },
+      {
+        "neighbor": "AP1006",
+        "neighbor_ip": "10.125.213.32",
+        "local_intf": "Te1/0/12",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.18",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/15"
+      },
+      {
+        "neighbor": "PA14004IFO",
+        "neighbor_ip": "10.125.213.28",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15005IFO",
+        "neighbor_ip": "10.125.213.25",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15004IFO",
+        "neighbor_ip": "10.125.213.26",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15007IFO",
+        "neighbor_ip": "10.125.213.27",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15006IFO",
+        "neighbor_ip": "10.125.214.242",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA14101IFO",
+        "neighbor_ip": "10.125.214.244",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15001IFO",
+        "neighbor_ip": "10.125.214.241",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15003IFO",
+        "neighbor_ip": "10.125.213.29",
+        "local_intf": "Te1/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA14103IFO",
+        "neighbor_ip": "10.125.213.31",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA14102IFO",
+        "neighbor_ip": "10.125.213.30",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA15002IFO",
+        "neighbor_ip": "10.125.214.243",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW11611IFO": {
+    "loopback0_ip": "10.125.209.84",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.89",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe5/0/16"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.82",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/16"
+      },
+      {
+        "neighbor": "PA16103IFO",
+        "neighbor_ip": "10.125.213.74",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA16002IFO",
+        "neighbor_ip": "10.125.213.73",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA16102IFO",
+        "neighbor_ip": "10.125.215.21",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA16003IFO",
+        "neighbor_ip": "10.125.215.22",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA16101IFO",
+        "neighbor_ip": "10.125.213.71",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA16001IFO",
+        "neighbor_ip": "10.125.213.72",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW12101IFO": {
+    "loopback0_ip": "10.125.209.111",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.121",
+        "local_intf": "Twe5/1/1",
+        "neighbor_intf": "Twe2/0/42"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.116",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/42"
+      },
+      {
+        "neighbor": "PA21002IFO",
+        "neighbor_ip": "10.125.215.54",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21012IFO",
+        "neighbor_ip": "10.125.213.93",
+        "local_intf": "Te2/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21003IFO",
+        "neighbor_ip": "10.125.215.53",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21011IFO",
+        "neighbor_ip": "10.125.215.38",
+        "local_intf": "Te2/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21001IFO",
+        "neighbor_ip": "10.125.215.55",
+        "local_intf": "Te2/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21010IFO",
+        "neighbor_ip": "10.125.215.34",
+        "local_intf": "Te2/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21006IFO",
+        "neighbor_ip": "10.125.215.52",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21007IFO",
+        "neighbor_ip": "10.125.214.167",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21004IFO",
+        "neighbor_ip": "10.125.214.164",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21005IFO",
+        "neighbor_ip": "10.125.213.94",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21008IFO",
+        "neighbor_ip": "10.125.214.169",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21009IFO",
+        "neighbor_ip": "10.125.215.33",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA95003IFO",
+        "neighbor_ip": "10.125.215.41",
+        "local_intf": "Te2/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA95002IFO",
+        "neighbor_ip": "10.125.213.127",
+        "local_intf": "Te2/0/4",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW12102IFO": {
+    "loopback0_ip": "10.125.209.127",
+    "cdp": [
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.132",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/17"
+      },
+      {
+        "neighbor": "PA21020IFO",
+        "neighbor_ip": "10.125.215.32",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21013IFO",
+        "neighbor_ip": "10.125.215.43",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21015IFO",
+        "neighbor_ip": "10.125.215.42",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21014IFO",
+        "neighbor_ip": "10.125.214.219",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA95001IFO",
+        "neighbor_ip": "10.125.215.82",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW12103IFO": {
+    "loopback0_ip": "10.125.209.192",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.203",
+        "local_intf": "Twe7/1/1",
+        "neighbor_intf": "Twe2/0/43"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.200",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/43"
+      },
+      {
+        "neighbor": "PA21021IFO",
+        "neighbor_ip": "10.125.213.120",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21022IFO",
+        "neighbor_ip": "10.125.215.78",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21023IFO",
+        "neighbor_ip": "10.125.213.123",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21017IFO",
+        "neighbor_ip": "10.125.213.113",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21042IFO",
+        "neighbor_ip": "10.125.215.77",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21024IFO",
+        "neighbor_ip": "10.125.213.121",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21016IFO",
+        "neighbor_ip": "10.125.215.85",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21025IFO",
+        "neighbor_ip": "10.125.213.122",
+        "local_intf": "Te1/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21037IFO",
+        "neighbor_ip": "10.125.215.79",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21026IFO",
+        "neighbor_ip": "10.125.213.124",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21019IFO",
+        "neighbor_ip": "10.125.215.84",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21018IFO",
+        "neighbor_ip": "10.125.215.64",
+        "local_intf": "Te1/0/13",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW12104IFO": {
+    "loopback0_ip": "10.125.209.32",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.45",
+        "local_intf": "Twe5/1/1",
+        "neighbor_intf": "Twe2/0/44"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.42",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/44"
+      },
+      {
+        "neighbor": "PA21031IFO",
+        "neighbor_ip": "10.125.213.91",
+        "local_intf": "Te2/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21030IFO",
+        "neighbor_ip": "10.125.213.88",
+        "local_intf": "Te2/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21033IFO",
+        "neighbor_ip": "10.125.215.48",
+        "local_intf": "Te2/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21032IFO",
+        "neighbor_ip": "10.125.213.92",
+        "local_intf": "Te2/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21035IFO",
+        "neighbor_ip": "10.125.213.89",
+        "local_intf": "Te2/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21034IFO",
+        "neighbor_ip": "10.125.215.51",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21041IFO",
+        "neighbor_ip": "10.125.213.118",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21027IFO",
+        "neighbor_ip": "10.125.215.45",
+        "local_intf": "Te2/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21036IFO",
+        "neighbor_ip": "10.125.213.90",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21039IFO",
+        "neighbor_ip": "10.125.215.50",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21028IFO",
+        "neighbor_ip": "10.125.215.49",
+        "local_intf": "Te2/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21038IFO",
+        "neighbor_ip": "10.125.215.47",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA21029IFO",
+        "neighbor_ip": "10.125.215.46",
+        "local_intf": "Te2/0/3",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW12201IFO": {
+    "loopback0_ip": "10.125.208.250",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.208.255",
+        "local_intf": "Twe1/1/2",
+        "neighbor_intf": "Twe5/0/8"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.208.248",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/8"
+      },
+      {
+        "neighbor": "PA22001IFO",
+        "neighbor_ip": "10.125.213.22",
+        "local_intf": "Gi1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA22002IFO",
+        "neighbor_ip": "10.125.214.236",
+        "local_intf": "Gi1/0/2",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW12911IFO": {
+    "loopback0_ip": "10.125.209.10",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.17",
+        "local_intf": "Twe2/1/1",
+        "neighbor_intf": "Twe5/0/43"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.8",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe5/0/43"
+      },
+      {
+        "neighbor": "PA29103IFO",
+        "neighbor_ip": "10.125.214.233",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA29002IFO",
+        "neighbor_ip": "10.125.213.16",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA29102IFO",
+        "neighbor_ip": "10.125.214.232",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA29101IFO",
+        "neighbor_ip": "10.125.214.231",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA29001IFO",
+        "neighbor_ip": "10.125.214.226",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW13011IFO": {
+    "loopback0_ip": "10.125.209.0",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.13",
+        "local_intf": "Twe1/1/2",
+        "neighbor_intf": "Twe2/0/45"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.6",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/45"
+      },
+      {
+        "neighbor": "PA30002IFO",
+        "neighbor_ip": "10.125.213.19",
+        "local_intf": "Gi1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA30001IFO",
+        "neighbor_ip": "10.125.215.83",
+        "local_intf": "Gi1/0/1",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW13101IFO": {
+    "loopback0_ip": "10.125.208.15",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.208.235",
+        "local_intf": "Twe7/1/1",
+        "neighbor_intf": "Twe2/0/12"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.208.232",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/12"
+      },
+      {
+        "neighbor": "PA31021IFO",
+        "neighbor_ip": "10.125.214.216",
+        "local_intf": "Te2/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31012IFO",
+        "neighbor_ip": "10.125.214.212",
+        "local_intf": "Te2/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31003IFO",
+        "neighbor_ip": "10.125.213.4",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31020IFO",
+        "neighbor_ip": "10.125.214.218",
+        "local_intf": "Te2/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31013IFO",
+        "neighbor_ip": "10.125.214.217",
+        "local_intf": "Te2/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31002IFO",
+        "neighbor_ip": "10.125.214.172",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31010IFO",
+        "neighbor_ip": "10.125.214.191",
+        "local_intf": "Te1/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31001IFO",
+        "neighbor_ip": "10.125.213.10",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31022IFO",
+        "neighbor_ip": "10.125.214.223",
+        "local_intf": "Te2/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31011IFO",
+        "neighbor_ip": "10.125.213.11",
+        "local_intf": "Te2/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31016IFO",
+        "neighbor_ip": "10.125.214.222",
+        "local_intf": "Te2/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31007IFO",
+        "neighbor_ip": "10.125.213.7",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31017IFO",
+        "neighbor_ip": "10.125.213.12",
+        "local_intf": "Te2/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31006IFO",
+        "neighbor_ip": "10.125.213.8",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31005IFO",
+        "neighbor_ip": "10.125.213.9",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31014IFO",
+        "neighbor_ip": "10.125.214.221",
+        "local_intf": "Te2/0/12",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31015IFO",
+        "neighbor_ip": "10.125.214.220",
+        "local_intf": "Te2/0/10",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31004IFO",
+        "neighbor_ip": "10.125.214.168",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31018IFO",
+        "neighbor_ip": "10.125.213.13",
+        "local_intf": "Te2/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31009IFO",
+        "neighbor_ip": "10.125.213.5",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31019IFO",
+        "neighbor_ip": "10.125.213.126",
+        "local_intf": "Te2/0/11",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA31008IFO",
+        "neighbor_ip": "10.125.213.6",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW13201IFO": {
+    "loopback0_ip": "10.125.208.241",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.208.245",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe2/0/14"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.208.242",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/14"
+      },
+      {
+        "neighbor": "PA32001IFO",
+        "neighbor_ip": "10.125.214.227",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32002IFO",
+        "neighbor_ip": "10.125.213.17",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32003IFO",
+        "neighbor_ip": "10.125.213.21",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32004IFO",
+        "neighbor_ip": "10.125.214.230",
+        "local_intf": "Te1/0/6",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32005IFO",
+        "neighbor_ip": "10.125.213.18",
+        "local_intf": "Te1/0/8",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32006IFO",
+        "neighbor_ip": "10.125.214.228",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32007IFO",
+        "neighbor_ip": "10.125.214.245",
+        "local_intf": "Te1/0/7",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32008IFO",
+        "neighbor_ip": "10.125.213.20",
+        "local_intf": "Te1/0/9",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32009IFO",
+        "neighbor_ip": "10.125.214.229",
+        "local_intf": "Te1/0/5",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA94001IFO",
+        "neighbor_ip": "10.124.128.75",
+        "local_intf": "Gi3/0/5",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW13211IFO": {
+    "loopback0_ip": "10.125.208.240",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.208.247",
+        "local_intf": "Twe3/1/1",
+        "neighbor_intf": "Twe2/0/13"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.208.238",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe2/0/13"
+      },
+      {
+        "neighbor": "PA32101IFO",
+        "neighbor_ip": "10.125.213.14",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32103IFO",
+        "neighbor_ip": "10.125.214.224",
+        "local_intf": "Te1/0/3",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32102IFO",
+        "neighbor_ip": "10.125.214.225",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA32104IFO",
+        "neighbor_ip": "10.125.213.15",
+        "local_intf": "Te1/0/4",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW19101IFO": {
+    "loopback0_ip": "10.125.210.56",
+    "cdp": [
+      {
+        "neighbor": "AP9CD5",
+        "neighbor_ip": "10.125.213.128",
+        "local_intf": "Te1/0/18",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.208.28",
+        "local_intf": "Twe2/1/1",
+        "neighbor_intf": "Twe2/0/21"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.208.216",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/17"
+      },
+      {
+        "neighbor": "PA91001IFO",
+        "neighbor_ip": "10.125.212.2",
+        "local_intf": "Te1/0/1",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA91002IFO",
+        "neighbor_ip": "10.125.214.165",
+        "local_intf": "Te1/0/2",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW19201IFO": {
+    "loopback0_ip": "10.125.209.96",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.115",
+        "local_intf": "Twe1/1/2",
+        "neighbor_intf": "Twe6/0/18"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.104",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/18"
+      },
+      {
+        "neighbor": "PA92002IFO",
+        "neighbor_ip": "10.125.215.56",
+        "local_intf": "Gi1/0/23",
+        "neighbor_intf": "Gi0"
+      },
+      {
+        "neighbor": "PA92001IFO",
+        "neighbor_ip": "10.125.215.30",
+        "local_intf": "Gi1/0/15",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW19301IFO": {
+    "loopback0_ip": "10.125.209.124",
+    "cdp": [
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.209.140",
+        "local_intf": "Twe1/1/2",
+        "neighbor_intf": "Twe6/0/19"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.209.122",
+        "local_intf": "Twe1/1/1",
+        "neighbor_intf": "Twe6/0/19"
+      },
+      {
+        "neighbor": "PA93001IFO",
+        "neighbor_ip": "10.125.215.31",
+        "local_intf": "Gi1/0/6",
+        "neighbor_intf": "Gi0"
+      }
+    ]
+  },
+  "SW200CIPD": {
+    "loopback0_ip": "10.255.12.81",
+    "cdp": [
+      {
+        "neighbor": "SW11411IFO",
+        "neighbor_ip": "10.125.209.19",
+        "local_intf": "Twe5/0/15",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10411IFO",
+        "neighbor_ip": "10.125.209.55",
+        "local_intf": "Twe6/0/13",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11401IFO",
+        "neighbor_ip": "10.125.209.23",
+        "local_intf": "Twe5/0/13",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW125111IFO2",
+        "neighbor_ip": "10.125.208.193",
+        "local_intf": "Twe6/0/40",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW12104IFO",
+        "neighbor_ip": "10.125.209.43",
+        "local_intf": "Twe2/0/44",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11611IFO",
+        "neighbor_ip": "10.125.209.83",
+        "local_intf": "Twe5/0/16",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10611IFO",
+        "neighbor_ip": "10.125.209.61",
+        "local_intf": "Twe6/0/15",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11101IFO",
+        "neighbor_ip": "10.125.208.253",
+        "local_intf": "Twe5/0/17",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11312IFO",
+        "neighbor_ip": "10.125.209.93",
+        "local_intf": "Twe5/0/12",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11011IFO",
+        "neighbor_ip": "10.125.209.81",
+        "local_intf": "Twe6/0/20",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10111IFO",
+        "neighbor_ip": "10.125.209.67",
+        "local_intf": "Twe6/0/10",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW13211IFO",
+        "neighbor_ip": "10.125.208.239",
+        "local_intf": "Twe2/0/13",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12102IFO",
+        "neighbor_ip": "10.125.209.133",
+        "local_intf": "Twe2/0/17",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12201IFO",
+        "neighbor_ip": "10.125.208.249",
+        "local_intf": "Twe5/0/8",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12100011IFO2",
+        "neighbor_ip": "10.125.208.185",
+        "local_intf": "Twe6/0/38",
+        "neighbor_intf": "Twe8/1/1"
+      },
+      {
+        "neighbor": "SW12101111IFO2",
+        "neighbor_ip": "10.125.208.187",
+        "local_intf": "Twe6/0/44",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW12103IFO",
+        "neighbor_ip": "10.125.209.201",
+        "local_intf": "Twe2/0/43",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10101IFO",
+        "neighbor_ip": "10.125.209.131",
+        "local_intf": "Twe6/0/9",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW13201IFO",
+        "neighbor_ip": "10.125.208.243",
+        "local_intf": "Twe2/0/14",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11212IFO",
+        "neighbor_ip": "10.125.209.107",
+        "local_intf": "Twe5/0/10",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW13101IFO",
+        "neighbor_ip": "10.125.208.233",
+        "local_intf": "Twe2/0/12",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW13011IFO",
+        "neighbor_ip": "10.125.209.7",
+        "local_intf": "Twe2/0/45",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW122111IFO2",
+        "neighbor_ip": "10.125.208.191",
+        "local_intf": "Twe6/0/41",
+        "neighbor_intf": "Twe6/1/1"
+      },
+      {
+        "neighbor": "SW10311IFO",
+        "neighbor_ip": "10.125.209.35",
+        "local_intf": "Twe6/0/12",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11301IFO",
+        "neighbor_ip": "10.125.209.49",
+        "local_intf": "Twe2/0/15",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11002211IFO2",
+        "neighbor_ip": "10.125.208.223",
+        "local_intf": "Twe5/0/42",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW11311IFO",
+        "neighbor_ip": "10.125.209.101",
+        "local_intf": "Twe5/0/11",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10211IFO",
+        "neighbor_ip": "10.125.209.39",
+        "local_intf": "Twe6/0/11",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11201IFO",
+        "neighbor_ip": "10.125.209.145",
+        "local_intf": "Twe6/0/21",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12101IFO",
+        "neighbor_ip": "10.125.209.117",
+        "local_intf": "Twe2/0/42",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10914IFO",
+        "neighbor_ip": "10.125.209.183",
+        "local_intf": "Twe6/0/4",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10911IFO",
+        "neighbor_ip": "10.125.209.206",
+        "local_intf": "Twe6/0/2",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10922IFO",
+        "neighbor_ip": "10.125.209.171",
+        "local_intf": "Twe6/0/6",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW19101IFO",
+        "neighbor_ip": "10.125.208.217",
+        "local_intf": "Twe6/0/17",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10923IFO",
+        "neighbor_ip": "10.125.209.167",
+        "local_intf": "Twe6/0/8",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10901IFO",
+        "neighbor_ip": "10.125.209.143",
+        "local_intf": "Twe6/0/1",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10913IFO",
+        "neighbor_ip": "10.125.209.181",
+        "local_intf": "Twe6/0/5",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW19301IFO",
+        "neighbor_ip": "10.125.209.123",
+        "local_intf": "Twe6/0/19",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12911IFO",
+        "neighbor_ip": "10.125.209.9",
+        "local_intf": "Twe5/0/43",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10912IFO",
+        "neighbor_ip": "10.125.209.199",
+        "local_intf": "Twe6/0/3",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10921IFO",
+        "neighbor_ip": "10.125.209.163",
+        "local_intf": "Twe6/0/7",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW19201IFO",
+        "neighbor_ip": "10.125.209.105",
+        "local_intf": "Twe6/0/18",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260021IFO2",
+        "neighbor_ip": "10.125.208.197",
+        "local_intf": "Twe2/0/5",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1161111IFO2",
+        "neighbor_ip": "10.125.208.167",
+        "local_intf": "Twe5/0/26",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1260031IFO2",
+        "neighbor_ip": "10.125.208.199",
+        "local_intf": "Twe2/0/6",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1171111IFO2",
+        "neighbor_ip": "10.125.208.171",
+        "local_intf": "Twe5/0/28",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1141121IFO2",
+        "neighbor_ip": "10.125.208.165",
+        "local_intf": "Twe2/0/33",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1102261IFO2",
+        "neighbor_ip": "10.125.208.137",
+        "local_intf": "Twe5/0/39",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1271111IFO2",
+        "neighbor_ip": "10.125.208.209",
+        "local_intf": "Twe6/0/45",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1141111IFO2",
+        "neighbor_ip": "10.125.208.163",
+        "local_intf": "Twe2/0/32",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1171121IFO2",
+        "neighbor_ip": "10.125.208.173",
+        "local_intf": "Twe5/0/29",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1102251IFO2",
+        "neighbor_ip": "10.125.208.135",
+        "local_intf": "Twe5/0/40",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260011IFO2",
+        "neighbor_ip": "10.125.208.195",
+        "local_intf": "Twe2/0/4",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1161121IFO2",
+        "neighbor_ip": "10.125.208.169",
+        "local_intf": "Twe5/0/27",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1102241IFO2",
+        "neighbor_ip": "10.125.208.133",
+        "local_intf": "Twe2/0/40",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1260061IFO2",
+        "neighbor_ip": "10.125.208.207",
+        "local_intf": "Twe2/0/9",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW301IFO2",
+        "neighbor_ip": "10.15.200.124",
+        "local_intf": "Twe2/0/19",
+        "neighbor_intf": "Twe1/0/19"
+      },
+      {
+        "neighbor": "SW1103331IFO2",
+        "neighbor_ip": "10.125.208.147",
+        "local_intf": "Twe2/0/37",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1121111IFO2",
+        "neighbor_ip": "10.125.208.155",
+        "local_intf": "Twe2/0/27",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1111121IFO2",
+        "neighbor_ip": "10.125.208.153",
+        "local_intf": "Twe2/0/25",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1101131IFO2",
+        "neighbor_ip": "10.125.208.225",
+        "local_intf": "Twe5/0/25",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1102231IFO2",
+        "neighbor_ip": "10.125.208.131",
+        "local_intf": "Twe5/0/41",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW301IFO2",
+        "neighbor_ip": "10.15.200.124",
+        "local_intf": "Twe5/0/18",
+        "neighbor_intf": "Twe1/0/18"
+      },
+      {
+        "neighbor": "SW1200011IFO2",
+        "neighbor_ip": "10.125.208.183",
+        "local_intf": "Twe6/0/47",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1103321IFO2",
+        "neighbor_ip": "10.125.208.145",
+        "local_intf": "Twe5/0/38",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1131111IFO2",
+        "neighbor_ip": "10.125.208.159",
+        "local_intf": "Twe2/0/29",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1102221IFO2",
+        "neighbor_ip": "10.125.208.129",
+        "local_intf": "Twe2/0/41",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1101121IFO2",
+        "neighbor_ip": "10.125.208.11",
+        "local_intf": "Twe2/0/31",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260071IFO2",
+        "neighbor_ip": "10.125.208.205",
+        "local_intf": "Twe2/0/10",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.1.254",
+        "local_intf": "Twe5/0/21",
+        "neighbor_intf": "Twe5/0/48"
+      },
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.1.254",
+        "local_intf": "Twe2/0/21",
+        "neighbor_intf": "Twe2/0/48"
+      },
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.1.254",
+        "local_intf": "Twe5/0/20",
+        "neighbor_intf": "Twe5/0/47"
+      },
+      {
+        "neighbor": "SW201IFO2",
+        "neighbor_ip": "10.125.1.254",
+        "local_intf": "Twe2/0/20",
+        "neighbor_intf": "Twe2/0/47"
+      },
+      {
+        "neighbor": "SW1260041IFO2",
+        "neighbor_ip": "10.125.208.203",
+        "local_intf": "Twe2/0/7",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1230011IFO2",
+        "neighbor_ip": "10.125.208.231",
+        "local_intf": "Twe6/0/43",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1131121IFO2",
+        "neighbor_ip": "10.125.208.161",
+        "local_intf": "Twe2/0/30",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1101111IFO2",
+        "neighbor_ip": "10.125.208.229",
+        "local_intf": "Twe2/0/26",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1103311IFO2",
+        "neighbor_ip": "10.125.208.143",
+        "local_intf": "Twe2/0/38",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW202IFO2",
+        "neighbor_ip": "10.125.208.5",
+        "local_intf": "Twe2/0/16",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1260051IFO2",
+        "neighbor_ip": "10.125.208.201",
+        "local_intf": "Twe2/0/8",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1111111IFO2",
+        "neighbor_ip": "10.125.208.151",
+        "local_intf": "Twe2/0/24",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1121121IFO2",
+        "neighbor_ip": "10.125.208.157",
+        "local_intf": "Twe2/0/28",
+        "neighbor_intf": "Twe6/1/1"
+      },
+      {
+        "neighbor": "SW1220011IFO2",
+        "neighbor_ip": "10.125.208.189",
+        "local_intf": "Twe6/0/42",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1290011IFO2",
+        "neighbor_ip": "10.125.208.219",
+        "local_intf": "Twe6/0/39",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1281111IFO2",
+        "neighbor_ip": "10.125.208.211",
+        "local_intf": "Twe5/0/34",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1181121IFO2",
+        "neighbor_ip": "10.125.208.177",
+        "local_intf": "Twe5/0/31",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1290111IFO2",
+        "neighbor_ip": "10.125.208.215",
+        "local_intf": "Twe5/0/46",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1281121IFO2",
+        "neighbor_ip": "10.125.208.213",
+        "local_intf": "Twe5/0/33",
+        "neighbor_intf": "Twe7/1/1"
+      },
+      {
+        "neighbor": "SW1181111IFO2",
+        "neighbor_ip": "10.125.208.175",
+        "local_intf": "Twe5/0/30",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW1102291IFO2",
+        "neighbor_ip": "10.125.208.139",
+        "local_intf": "Twe2/0/39",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1191111IFO2",
+        "neighbor_ip": "10.125.208.179",
+        "local_intf": "Twe5/0/32",
+        "neighbor_intf": "Twe6/1/1"
+      },
+      {
+        "neighbor": "SW1102213CIPD",
+        "neighbor_ip": "10.125.208.237",
+        "local_intf": "Twe2/0/23",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1200001CIPD",
+        "neighbor_ip": "10.125.208.181",
+        "local_intf": "Twe5/0/23",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW300CIPD",
+        "neighbor_ip": "10.15.200.125",
+        "local_intf": "Twe2/0/1",
+        "neighbor_intf": "Twe1/0/19"
+      },
+      {
+        "neighbor": "SW300CIPD",
+        "neighbor_ip": "10.15.200.125",
+        "local_intf": "Twe5/0/1",
+        "neighbor_intf": "Twe1/0/18"
+      },
+      {
+        "neighbor": "SW1102212CIPD",
+        "neighbor_ip": "10.125.208.17",
+        "local_intf": "Twe5/0/24",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1101111CIPD",
+        "neighbor_ip": "10.125.208.227",
+        "local_intf": "Twe5/0/36",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1104411CIPD",
+        "neighbor_ip": "10.125.208.149",
+        "local_intf": "Twe2/0/34",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1103311CIPD",
+        "neighbor_ip": "10.125.208.141",
+        "local_intf": "Twe5/0/35",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1102211CIPD",
+        "neighbor_ip": "10.125.208.13",
+        "local_intf": "Twe2/0/35",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1100011CIPD",
+        "neighbor_ip": "10.125.208.9",
+        "local_intf": "Twe2/0/36",
+        "neighbor_intf": "Twe1/1/1"
+      }
+    ]
+  },
+  "SW201IFO2": {
+    "loopback0_ip": "10.255.84.74",
+    "cdp": [
+      {
+        "neighbor": "SW11411IFO",
+        "neighbor_ip": "10.125.209.20",
+        "local_intf": "Twe5/0/15",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW10411IFO",
+        "neighbor_ip": "10.125.209.58",
+        "local_intf": "Twe6/0/13",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW11401IFO",
+        "neighbor_ip": "10.125.209.28",
+        "local_intf": "Twe5/0/13",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW125111IFO2",
+        "neighbor_ip": "10.125.208.19",
+        "local_intf": "Twe2/0/20",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12104IFO",
+        "neighbor_ip": "10.125.209.44",
+        "local_intf": "Twe2/0/44",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW11611IFO",
+        "neighbor_ip": "10.125.209.88",
+        "local_intf": "Twe5/0/16",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW10611IFO",
+        "neighbor_ip": "10.125.209.76",
+        "local_intf": "Twe6/0/15",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW11011IFO",
+        "neighbor_ip": "10.125.209.91",
+        "local_intf": "Twe6/0/20",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW11312IFO",
+        "neighbor_ip": "10.125.209.98",
+        "local_intf": "Twe5/0/12",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW13211IFO",
+        "neighbor_ip": "10.125.208.246",
+        "local_intf": "Twe2/0/13",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW12201IFO",
+        "neighbor_ip": "10.125.208.254",
+        "local_intf": "Twe5/0/8",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW12100011IFO2",
+        "neighbor_ip": "10.125.208.21",
+        "local_intf": "Twe2/0/18",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12101111IFO2",
+        "neighbor_ip": "10.125.208.23",
+        "local_intf": "Twe2/0/19",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12103IFO",
+        "neighbor_ip": "10.125.209.202",
+        "local_intf": "Twe2/0/43",
+        "neighbor_intf": "Twe7/1/1"
+      },
+      {
+        "neighbor": "SW10101IFO",
+        "neighbor_ip": "10.125.209.139",
+        "local_intf": "Twe6/0/9",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW13201IFO",
+        "neighbor_ip": "10.125.208.244",
+        "local_intf": "Twe2/0/14",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW13101IFO",
+        "neighbor_ip": "10.125.208.234",
+        "local_intf": "Twe2/0/12",
+        "neighbor_intf": "Twe7/1/1"
+      },
+      {
+        "neighbor": "SW13011IFO",
+        "neighbor_ip": "10.125.209.12",
+        "local_intf": "Twe2/0/45",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW122111IFO2",
+        "neighbor_ip": "10.125.208.27",
+        "local_intf": "Twe2/0/22",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW10311IFO",
+        "neighbor_ip": "10.125.209.36",
+        "local_intf": "Twe6/0/12",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW11301IFO",
+        "neighbor_ip": "10.125.209.52",
+        "local_intf": "Twe2/0/15",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW11002211IFO2",
+        "neighbor_ip": "10.125.208.25",
+        "local_intf": "Twe5/0/42",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW11311IFO",
+        "neighbor_ip": "10.125.209.102",
+        "local_intf": "Twe5/0/11",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW10211IFO",
+        "neighbor_ip": "10.125.209.40",
+        "local_intf": "Twe6/0/11",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW11201IFO",
+        "neighbor_ip": "10.125.209.156",
+        "local_intf": "Twe6/0/21",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW12101IFO",
+        "neighbor_ip": "10.125.209.120",
+        "local_intf": "Twe2/0/42",
+        "neighbor_intf": "Twe5/1/1"
+      },
+      {
+        "neighbor": "SW10914IFO",
+        "neighbor_ip": "10.125.209.195",
+        "local_intf": "Twe6/0/4",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW10922IFO",
+        "neighbor_ip": "10.125.209.174",
+        "local_intf": "Twe6/0/6",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW10911IFO",
+        "neighbor_ip": "10.125.209.197",
+        "local_intf": "Twe6/0/2",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW19101IFO",
+        "neighbor_ip": "10.125.208.29",
+        "local_intf": "Twe2/0/21",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW10923IFO",
+        "neighbor_ip": "10.125.209.178",
+        "local_intf": "Twe6/0/8",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW10901IFO",
+        "neighbor_ip": "10.125.209.155",
+        "local_intf": "Twe6/0/1",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW10811IFO",
+        "neighbor_ip": "10.125.209.72",
+        "local_intf": "Twe6/0/16",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW12911IFO",
+        "neighbor_ip": "10.125.209.16",
+        "local_intf": "Twe5/0/43",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW10913IFO",
+        "neighbor_ip": "10.125.209.189",
+        "local_intf": "Twe6/0/5",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW19301IFO",
+        "neighbor_ip": "10.125.209.141",
+        "local_intf": "Twe6/0/19",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW10921IFO",
+        "neighbor_ip": "10.125.209.164",
+        "local_intf": "Twe6/0/7",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW10912IFO",
+        "neighbor_ip": "10.125.209.204",
+        "local_intf": "Twe6/0/3",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW19201IFO",
+        "neighbor_ip": "10.125.209.114",
+        "local_intf": "Twe6/0/18",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1260021IFO2",
+        "neighbor_ip": "10.125.208.35",
+        "local_intf": "Twe2/0/5",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1161111IFO2",
+        "neighbor_ip": "10.125.208.31",
+        "local_intf": "Twe5/0/26",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260031IFO2",
+        "neighbor_ip": "10.125.208.41",
+        "local_intf": "Twe2/0/6",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1141121IFO2",
+        "neighbor_ip": "10.125.208.39",
+        "local_intf": "Twe2/0/33",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1171111IFO2",
+        "neighbor_ip": "10.125.208.37",
+        "local_intf": "Twe5/0/28",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1102261IFO2",
+        "neighbor_ip": "10.125.208.7",
+        "local_intf": "Twe5/0/37",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1271111IFO2",
+        "neighbor_ip": "10.125.208.45",
+        "local_intf": "Twe5/0/18",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1102251IFO2",
+        "neighbor_ip": "10.125.208.49",
+        "local_intf": "Twe5/0/40",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW1171121IFO2",
+        "neighbor_ip": "10.125.208.51",
+        "local_intf": "Twe5/0/29",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1141111IFO2",
+        "neighbor_ip": "10.125.208.47",
+        "local_intf": "Twe2/0/32",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260011IFO2",
+        "neighbor_ip": "10.125.208.57",
+        "local_intf": "Twe2/0/4",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1161121IFO2",
+        "neighbor_ip": "10.125.208.53",
+        "local_intf": "Twe5/0/27",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1102241IFO2",
+        "neighbor_ip": "10.125.208.55",
+        "local_intf": "Twe2/0/40",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260061IFO2",
+        "neighbor_ip": "10.125.208.61",
+        "local_intf": "Twe2/0/9",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW301IFO2",
+        "neighbor_ip": "10.15.200.124",
+        "local_intf": "Twe5/0/2",
+        "neighbor_intf": "Twe1/0/16"
+      },
+      {
+        "neighbor": "SW301IFO2",
+        "neighbor_ip": "10.15.200.124",
+        "local_intf": "Twe2/0/2",
+        "neighbor_intf": "Twe1/0/17"
+      },
+      {
+        "neighbor": "SW1103331IFO2",
+        "neighbor_ip": "10.125.208.63",
+        "local_intf": "Twe2/0/37",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1102231IFO2",
+        "neighbor_ip": "10.125.208.65",
+        "local_intf": "Twe5/0/41",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1111121IFO2",
+        "neighbor_ip": "10.125.208.59",
+        "local_intf": "Twe2/0/25",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1121111IFO2",
+        "neighbor_ip": "10.125.208.67",
+        "local_intf": "Twe2/0/27",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1101131IFO2",
+        "neighbor_ip": "10.125.208.69",
+        "local_intf": "Twe5/0/25",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1200011IFO2",
+        "neighbor_ip": "10.125.208.77",
+        "local_intf": "Twe5/0/19",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1102221IFO2",
+        "neighbor_ip": "10.125.208.71",
+        "local_intf": "Twe2/0/41",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1101121IFO2",
+        "neighbor_ip": "10.125.208.73",
+        "local_intf": "Twe2/0/31",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1131111IFO2",
+        "neighbor_ip": "10.125.208.3",
+        "local_intf": "Twe2/0/29",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1103321IFO2",
+        "neighbor_ip": "10.125.208.75",
+        "local_intf": "Twe5/0/38",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1260071IFO2",
+        "neighbor_ip": "10.125.208.83",
+        "local_intf": "Twe2/0/11",
+        "neighbor_intf": "Twe1/1/2"
+      },
+      {
+        "neighbor": "SW1260041IFO2",
+        "neighbor_ip": "10.125.208.89",
+        "local_intf": "Twe2/0/7",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1230011IFO2",
+        "neighbor_ip": "10.125.208.87",
+        "local_intf": "Twe5/0/20",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1131121IFO2",
+        "neighbor_ip": "10.125.208.81",
+        "local_intf": "Twe2/0/30",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1101111IFO2",
+        "neighbor_ip": "10.125.208.79",
+        "local_intf": "Twe2/0/26",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1103311IFO2",
+        "neighbor_ip": "10.125.208.85",
+        "local_intf": "Twe2/0/38",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW202IFO2",
+        "neighbor_ip": "10.125.208.220",
+        "local_intf": "Twe2/0/16",
+        "neighbor_intf": "Twe2/1/2"
+      },
+      {
+        "neighbor": "SW1260051IFO2",
+        "neighbor_ip": "10.125.208.93",
+        "local_intf": "Twe2/0/8",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1111111IFO2",
+        "neighbor_ip": "10.125.208.91",
+        "local_intf": "Twe2/0/24",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1121121IFO2",
+        "neighbor_ip": "10.125.208.95",
+        "local_intf": "Twe2/0/28",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1220011IFO2",
+        "neighbor_ip": "10.125.208.97",
+        "local_intf": "Twe5/0/21",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1290011IFO2",
+        "neighbor_ip": "10.125.208.99",
+        "local_intf": "Twe5/0/22",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1281111IFO2",
+        "neighbor_ip": "10.125.208.103",
+        "local_intf": "Twe5/0/34",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1181121IFO2",
+        "neighbor_ip": "10.125.208.101",
+        "local_intf": "Twe5/0/31",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1290111IFO2",
+        "neighbor_ip": "10.125.208.105",
+        "local_intf": "Twe5/0/46",
+        "neighbor_intf": "Twe2/1/1"
+      },
+      {
+        "neighbor": "SW1281121IFO2",
+        "neighbor_ip": "10.125.208.107",
+        "local_intf": "Twe5/0/33",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1181111IFO2",
+        "neighbor_ip": "10.125.208.109",
+        "local_intf": "Twe5/0/30",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1102291IFO2",
+        "neighbor_ip": "10.125.208.115",
+        "local_intf": "Twe2/0/39",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1191111IFO2",
+        "neighbor_ip": "10.125.208.111",
+        "local_intf": "Twe5/0/32",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.255.254",
+        "local_intf": "Twe5/0/48",
+        "neighbor_intf": "Twe5/0/21"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.255.254",
+        "local_intf": "Twe2/0/48",
+        "neighbor_intf": "Twe2/0/21"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.255.254",
+        "local_intf": "Twe2/0/47",
+        "neighbor_intf": "Twe2/0/20"
+      },
+      {
+        "neighbor": "SW200CIPD",
+        "neighbor_ip": "10.125.255.254",
+        "local_intf": "Twe5/0/47",
+        "neighbor_intf": "Twe5/0/20"
+      },
+      {
+        "neighbor": "SW1200001CIPD",
+        "neighbor_ip": "10.125.208.117",
+        "local_intf": "Twe5/0/23",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1102213CIPD",
+        "neighbor_ip": "10.125.208.113",
+        "local_intf": "Twe2/0/23",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW300CIPD",
+        "neighbor_ip": "10.15.200.125",
+        "local_intf": "Twe2/0/1",
+        "neighbor_intf": "Twe1/0/9"
+      },
+      {
+        "neighbor": "SW300CIPD",
+        "neighbor_ip": "10.15.200.125",
+        "local_intf": "Twe5/0/1",
+        "neighbor_intf": "Twe1/0/13"
+      },
+      {
+        "neighbor": "SW1102212CIPD",
+        "neighbor_ip": "10.125.208.33",
+        "local_intf": "Twe5/0/24",
+        "neighbor_intf": "Twe4/1/1"
+      },
+      {
+        "neighbor": "SW1101111CIPD",
+        "neighbor_ip": "10.125.208.125",
+        "local_intf": "Twe5/0/36",
+        "neighbor_intf": "Twe1/1/1"
+      },
+      {
+        "neighbor": "SW1103311CIPD",
+        "neighbor_ip": "10.125.208.127",
+        "local_intf": "Twe5/0/35",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1100011CIPD",
+        "neighbor_ip": "10.125.208.123",
+        "local_intf": "Twe2/0/36",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1104411CIPD",
+        "neighbor_ip": "10.125.208.121",
+        "local_intf": "Twe2/0/34",
+        "neighbor_intf": "Twe3/1/1"
+      },
+      {
+        "neighbor": "SW1102211CIPD",
+        "neighbor_ip": "10.125.208.119",
+        "local_intf": "Twe2/0/35",
+        "neighbor_intf": "Twe3/1/1"
+      }
+    ]
+  }
+}

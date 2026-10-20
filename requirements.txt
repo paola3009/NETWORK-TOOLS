@@ -1,0 +1,10 @@
+Flask>=3.0,<4.0
+markdown>=3.5
+bleach>=6.0
+netmiko>=4.4
+pandas>=2.2
+openpyxl>=3.1
+python-docx>=1.1.0
+reportlab>=4.0.0
+pillow>=10.0.0
+vsdx>=0.6.0

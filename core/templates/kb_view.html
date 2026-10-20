@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block titulo %}{{ topico.titulo }}{% endblock %}
+{% block conteudo %}
+<section class="page-head">
+    <div style="flex: 1;">
+        <a href="{{ url_for('menu', menu_id=menu_id) }}" class="text-muted" style="font-size: 13px; display: inline-block; margin-bottom: 8px;">
+            &larr; Voltar para {{ menu.titulo }}
+        </a>
+        <h1 style="margin: 0; font-size: 24px;">{{ topico.titulo }}</h1>
+        <p style="margin-top: 4px; color: var(--text-muted); font-size: 13px;">
+            Publicado por <strong>{{ topico.autor or "Administrador" }}</strong> em {{ topico.data }}
+        </p>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+        <a href="{{ url_for('novo_topico_kb', menu_id=menu_id) }}" class="btn btn-outline">+ Novo Artigo</a>
+        <a href="#edit-topic-modal" class="btn btn-outline" style="color: #2563eb; border-color: #93c5fd;">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Editar Artigo
+        </a>
+        <a href="#delete-topic-modal" class="btn btn-danger-outline">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            Excluir Artigo
+        </a>
+    </div>
+</section>
+
+<!-- Modal Edição de Tópico KB (Senha Admin) -->
+<div id="edit-topic-modal" class="modal-window">
+    <div style="text-align: left;">
+        <a href="#" title="Fechar" class="modal-close">&times;</a>
+        <h2 style="color: #1e40af;">Editar Artigo da Base de Conhecimento</h2>
+        <p style="margin: 12px 0 18px; color: #475569;">
+            Insira a senha de administrador para liberar a edição do artigo <strong>{{ topico.titulo }}</strong>:
+        </p>
+        <form method="POST" action="{{ url_for('editar_topico_kb', menu_id=menu_id, topico_id=topico.id) }}">
+            <div class="form-group">
+                <label for="pwd-edit-kb">Senha de Administrador:</label>
+                <input type="password" id="pwd-edit-kb" name="senha_edicao" required placeholder="Digite a senha administrativa" autocomplete="off" autofocus>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+                <a href="#" class="btn btn-outline">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Liberar Edição</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Exclusão de Tópico KB -->
+<div id="delete-topic-modal" class="modal-window">
+    <div style="text-align: left;">
+        <a href="#" title="Fechar" class="modal-close">&times;</a>
+        <h2 style="color: #b91c1c;">Excluir Artigo da Base de Conhecimento</h2>
+        <p style="margin: 12px 0 18px; color: #475569;">
+            Tem certeza que deseja excluir permanentemente o artigo <strong>{{ topico.titulo }}</strong> e todos os seus anexos?
+        </p>
+        <form method="POST" action="{{ url_for('excluir_topico_kb', menu_id=menu_id, topico_id=topico.id) }}">
+            <div class="form-group">
+                <label for="pwd-del-kb">Senha de Administrador para confirmação:</label>
+                <input type="password" id="pwd-del-kb" name="senha_exclusao" required placeholder="Digite a senha administrativa" autocomplete="off">
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+                <a href="#" class="btn btn-outline">Cancelar</a>
+                <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Cabeçalho Oficial do Artigo (Logo da Empresa + Ações de Exportação Word / PDF) -->
+<div class="kb-article-header">
+    <div class="kb-article-header-brand">
+        {% if marca.logo %}
+        <img src="{{ url_for('static', filename=marca.logo) }}" alt="Logo Corporativo" class="kb-company-logo-img">
+        {% else %}
+        <div style="width: 44px; height: 44px; border-radius: 8px; background: #e0e7ff; display: flex; align-items: center; justify-content: center; color: #4338ca;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        {% endif %}
+        <div>
+            <div style="font-weight: 700; font-size: 16px; color: #0f172a;">{{ marca.nome }}</div>
+            <div style="font-size: 13px; color: #64748b;">Documentação Técnica Oficial</div>
+        </div>
+    </div>
+    
+    <div style="display: flex; gap: 10px; align-items: center;">
+        <span style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 4px;">Exportar:</span>
+        <a href="{{ url_for('exportar_kb_docx', menu_id=menu_id, topico_id=topico.id) }}" class="btn-export btn-export-docx" title="Exportar artigo para Microsoft Word (.docx)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Word (.docx)
+        </a>
+        <a href="{{ url_for('exportar_kb_pdf', menu_id=menu_id, topico_id=topico.id) }}" class="btn-export btn-export-pdf" title="Exportar artigo para Adobe PDF (.pdf)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            PDF (.pdf)
+        </a>
+    </div>
+</div>
+
+{% if topico.anexos %}
+<div class="kb-attachments-box">
+    <h3>Anexos ({{ topico.anexos|length }}):</h3>
+    <div class="kb-attachments-list">
+        {% for a in topico.anexos %}
+        <a href="{{ url_for('download_kb_anexo', anexo_id=a.id) }}" class="attachment-chip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            <span>{{ a.nome_original }}</span>
+            <small>({{ (a.tamanho / 1024)|round(1) }} KB)</small>
+            <span class="chip-download">&darr;</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<article class="kb-content markdown-body">
+    <div style="border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 20px;">
+        <h1 style="margin: 0 0 6px 0; font-size: 26px; color: #0f172a;">{{ topico.titulo }}</h1>
+        <div style="font-size: 13px; color: #64748b;">
+            Autor: <strong style="color: #334155;">{{ topico.autor or "Administrador" }}</strong> &bull; Atualizado em: <span>{{ topico.data }}</span>
+        </div>
+    </div>
+    {{ topico.conteudo_html|safe }}
+</article>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block titulo %}{{ menu.titulo }}{% endblock %}
+{% block conteudo %}
+<section class="page-head">
+    <div style="flex: 1;">
+        <h1>{{ menu.titulo }}</h1>
+        <p>Standard documents and templates ready for download and upload.</p>
+    </div>
+    <a href="#upload-modal" class="btn btn-primary">+ Upload Document</a>
+</section>
+
+{% if docs %}
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Document Name</th>
+                <th>File Name</th>
+                <th>Size</th>
+                <th>Uploaded Date</th>
+                <th style="text-align: right;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in docs %}
+            <tr>
+                <td>
+                    <strong>{{ d.titulo }}</strong>
+                    {% if d.descricao %}<br><small class="text-muted">{{ d.descricao }}</small>{% endif %}
+                </td>
+                <td><span class="file-badge">{{ d.nome_original }}</span></td>
+                <td>{{ (d.tamanho / 1024)|round(1) }} KB</td>
+                <td>{{ d.data }}</td>
+                <td style="text-align: right; white-space: nowrap;">
+                    <a href="{{ url_for('download_doc', doc_id=d.id) }}" class="btn btn-sm btn-outline">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                    <a href="#delete-doc-{{ d.id }}" class="btn btn-sm btn-danger-outline" style="margin-left: 6px;">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                        Delete
+                    </a>
+
+                    <!-- Modal Exclusão de Documento -->
+                    <div id="delete-doc-{{ d.id }}" class="modal-window">
+                        <div style="text-align: left;">
+                            <a href="#" title="Close" class="modal-close">&times;</a>
+                            <h2 style="color: #b91c1c;">Delete Document</h2>
+                            <p style="margin: 12px 0 18px; color: #475569;">
+                                Are you sure you want to permanently delete <strong>{{ d.titulo }}</strong> ({{ d.nome_original }})?
+                            </p>
+                            <form method="POST" action="{{ url_for('excluir_doc', menu_id=menu_id, doc_id=d.id) }}">
+                                <div class="form-group">
+                                    <label for="pwd-{{ d.id }}">Enter Admin Password to confirm:</label>
+                                    <input type="password" id="pwd-{{ d.id }}" name="senha_exclusao" required placeholder="Password required" autocomplete="off">
+                                </div>
+                                <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+                                    <a href="#" class="btn btn-outline">Cancel</a>
+                                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="empty">
+    <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    <h2>No documents uploaded yet</h2>
+    <p>Upload Excel, Word, PowerPoint, Visio, or PDF files to this repository.</p>
+</div>
+{% endif %}
+
+<!-- Modal Upload CSS puro -->
+<div id="upload-modal" class="modal-window">
+    <div>
+        <a href="#" title="Close" class="modal-close">&times;</a>
+        <h2>Upload Document</h2>
+        <p class="text-muted" style="margin-bottom: 20px;">Accepted: .xlsx, .docx, .pptx, .vsdx, .pdf, .txt</p>
+        <form method="POST" action="{{ url_for('upload_doc', menu_id=menu_id) }}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="titulo">Document Title:</label>
+                <input type="text" id="titulo" name="titulo" required placeholder="e.g. Assessment Report Template">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Description (optional):</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Brief notes about the document">
+            </div>
+            <div class="form-group">
+                <label for="arquivo">Select File:</label>
+                <input type="file" id="arquivo" name="arquivo" required accept=".xlsx,.xls,.csv,.docx,.doc,.pptx,.ppt,.vsdx,.vsd,.pdf,.txt,.png,.jpg,.jpeg">
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px;">
+                <a href="#" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

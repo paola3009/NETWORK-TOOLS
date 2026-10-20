@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block titulo %}Edit Topic - {{ topico.titulo }}{% endblock %}
+{% block conteudo %}
+<section class="page-head">
+    <div>
+        <h1>Edit Knowledge Base Topic</h1>
+        <p>In section: <strong>{{ menu.titulo }}</strong></p>
+    </div>
+    <a href="{{ url_for('ver_topico_kb', menu_id=menu_id, topico_id=topico.id) }}" class="btn btn-outline">&larr; Back to Topic</a>
+</section>
+
+<div class="kb-form-container">
+    <form method="POST" action="{{ url_for('salvar_edicao_topico_kb', menu_id=menu_id, topico_id=topico.id) }}" enctype="multipart/form-data">
+        <input type="hidden" name="edit_token" value="{{ edit_token }}">
+
+        <div class="form-group">
+            <label for="titulo">Topic Title:</label>
+            <input type="text" id="titulo" name="titulo" required value="{{ topico.titulo }}" placeholder="e.g. Cisco Catalyst 9300 Stack Troubleshooting Guide">
+        </div>
+
+        <div class="form-group">
+            <label for="autor">Author / Engineer Name:</label>
+            <input type="text" id="autor" name="autor" value="{{ topico.autor }}" placeholder="e.g. Network Team">
+        </div>
+
+        <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <label for="conteudo_md" style="margin-bottom: 0;">Content (Markdown & Rich Text formatting supported):</label>
+                <div class="text-muted" style="font-size: 12px;">
+                    💡 Cole prints com <code>Ctrl + V</code> ou arraste imagens
+                </div>
+            </div>
+
+            <!-- Barra de Ferramentas de Formatação -->
+            <div class="kb-toolbar">
+                <div class="kb-toolbar-group">
+                    <button type="button" class="kb-tool-btn" data-format="bold" title="Negrito (**texto**)"><b>B</b></button>
+                    <button type="button" class="kb-tool-btn" data-format="italic" title="Itálico (*texto*)"><i>I</i></button>
+                    <button type="button" class="kb-tool-btn" data-format="underline" title="Sublinhado (&lt;u&gt;texto&lt;/u&gt;)"><u>U</u></button>
+                    <button type="button" class="kb-tool-btn" data-format="mark" title="Marca-texto / Destaque"><mark>Destaque</mark></button>
+                </div>
+
+                <div class="kb-toolbar-separator"></div>
+
+                <!-- Cores de Fonte -->
+                <div class="kb-toolbar-group">
+                    <select id="kb-font-color-select" class="kb-tool-select" title="Cor da Fonte">
+                        <option value="">🎨 Cor do Texto</option>
+                        <option value="#dc2626">🔴 Vermelho</option>
+                        <option value="#2563eb">🔵 Azul</option>
+                        <option value="#16a34a">🟢 Verde</option>
+                        <option value="#ea580c">🟠 Laranja</option>
+                        <option value="#9333ea">🟣 Roxo</option>
+                        <option value="#64748b">⚪ Cinza</option>
+                    </select>
+                    <button type="button" class="kb-tool-btn kb-color-dot" data-color="#dc2626" title="Texto Vermelho" style="background: #dc2626;"></button>
+                    <button type="button" class="kb-tool-btn kb-color-dot" data-color="#2563eb" title="Texto Azul" style="background: #2563eb;"></button>
+                    <button type="button" class="kb-tool-btn kb-color-dot" data-color="#16a34a" title="Texto Verde" style="background: #16a34a;"></button>
+                </div>
+
+                <div class="kb-toolbar-separator"></div>
+
+                <div class="kb-toolbar-group">
+                    <button type="button" class="kb-tool-btn" data-format="h1" title="Título Principal (H1)">H1</button>
+                    <button type="button" class="kb-tool-btn" data-format="h2" title="Subtítulo (H2)">H2</button>
+                    <button type="button" class="kb-tool-btn" data-format="h3" title="Seção (H3)">H3</button>
+                </div>
+
+                <div class="kb-toolbar-separator"></div>
+
+                <div class="kb-toolbar-group">
+                    <button type="button" class="kb-tool-btn" data-format="bullet" title="Lista com Marcadores">• Lista</button>
+                    <button type="button" class="kb-tool-btn" data-format="number" title="Lista Numerada">1. Lista</button>
+                    <button type="button" class="kb-tool-btn" data-format="table" title="Inserir Tabela">🔲 Tabela</button>
+                    <button type="button" class="kb-tool-btn" data-format="code" title="Bloco de Código">💻 Código</button>
+                    <button type="button" class="kb-tool-btn" data-format="callout" title="Caixa de Alerta">⚠️ Alerta</button>
+                </div>
+
+                <div class="kb-toolbar-separator"></div>
+
+                <div class="kb-toolbar-group">
+                    <input type="file" id="input_picker_imagem" accept="image/*" style="display: none;">
+                    <button type="button" id="btn_inserir_imagem" class="kb-tool-btn" style="color: var(--primary);" title="Inserir Imagem ou Print Screen">
+                        📷 Inserir Imagem
+                    </button>
+                </div>
+            </div>
+
+            <textarea id="conteudo_md" name="conteudo_md" class="textarea-with-toolbar" rows="20" required>{{ topico.conteudo_md }}</textarea>
+        </div>
+
+        {% if topico.anexos %}
+        <div class="form-group" style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px;">
+            <label style="margin-bottom: 8px;">Existing Attachments (check to remove):</label>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                {% for a in topico.anexos %}
+                <label style="display: flex; align-items: center; gap: 10px; font-weight: normal; cursor: pointer; color: #334155;">
+                    <input type="checkbox" name="remover_anexos" value="{{ a.id }}" style="accent-color: #dc2626;">
+                    <span style="color: #dc2626; font-size: 13px; font-weight: 600;">[Excluir]</span>
+                    <span>{{ a.nome_original }} ({{ (a.tamanho / 1024)|round(1) }} KB)</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="anexos">Add More Attachments (Excel, Word, PowerPoint, Visio, PDF, Images):</label>
+            <input type="file" id="anexos" name="anexos" multiple accept=".xlsx,.xls,.csv,.docx,.doc,.pptx,.ppt,.vsdx,.vsd,.pdf,.txt,.png,.jpg,.jpeg">
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a href="{{ url_for('ver_topico_kb', menu_id=menu_id, topico_id=topico.id) }}" class="btn btn-outline">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='kb_paste.js') }}"></script>
+{% endblock %}

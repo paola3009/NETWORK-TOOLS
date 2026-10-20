@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block titulo %}Error {{ codigo }}{% endblock %}
+{% block conteudo %}
+<div class="empty">
+    <h2 style="color: #b91c1c;">Error {{ codigo }}</h2>
+    <p>{{ mensagem if mensagem else 'Unable to process your request.' }}</p>
+    <div style="margin-top: 20px;">
+        <a href="javascript:history.back()" class="btn btn-outline">&larr; Go Back</a>
+    </div>
+</div>
+{% endblock %}

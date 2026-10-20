@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables & secrets
+.env
+.env.*
+*.log
+
+# Generated customer files & exports (segurança para não vazar topologias/IPs reais)
+core/static/downloads/*
+!core/static/downloads/.gitkeep
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
